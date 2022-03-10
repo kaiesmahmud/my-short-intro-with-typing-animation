@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.intro{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: #343f4f;
+}
+.myself{
+    display: flex;
+    margin-right: 100px;
+}
+img{
+    width: 70px;
+    height:80px;
+    border-radius: 50%;
+}
+.myself .hello{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.myself p {
+    margin-left: 10px ;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+.myself p:nth-child(1){
+    color: rgb(253, 138, 95);
+}
+.myself p:nth-child(2) span{
+    color:rgb(188, 241, 224);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-weight: 600;
+    margin-top: 5px;
+    
+}
+.wrapper .flex-column{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.wrapper .static-txt
+{
+    color:#fff;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.wrapper .dynamic-txts{
+    overflow: hidden;
+    height:35px;
+}
+.dynamic-txts li{
+    position: relative;
+    top: 0;
+    color:#f3ab40;
+    list-style: none;
+    font-weight: 700;
+    animation: slide 10s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -150px;
+    }
+}
+
+.dynamic-txts li span{
+    position: relative;
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #343f4f;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 2.5s steps(19) infinite;
+}
+@keyframes typing {
+    100%{
+        left:100%;
+       margin: 0 -35px 0 35px;
+    }
+}
